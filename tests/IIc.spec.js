@@ -11,7 +11,7 @@ test ('Playwright Special locators', async ({ page }) => {
     await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
 
     //Timeout padrão de 5 segundos para as asserções esperadas
-    await expect(page.getByText("Success! The Form has been submitted successfully!.").toBeVisible(); 
+    await expect(page.getByText("Success! The Form has been submitted successfully!.")).toBeVisible(); 
 
     await page.getByRole("link", {name: "Shop"}).click();
     await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
